@@ -24,8 +24,8 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t ${DOCKER_USERNAME}/spring-app:${GITHUB_SHA} .
+          docker build -t ${DOCKER_USERNAME}/spring-app:latest .
 
       - name: Push Docker image to DockerHub
         run: |
-          docker push ${DOCKER_USERNAME}/spring-app:${GITHUB_SHA}
+          docker push ${DOCKER_USERNAME}/spring-app:latest
